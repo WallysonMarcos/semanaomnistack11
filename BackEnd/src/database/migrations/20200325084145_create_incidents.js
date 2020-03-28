@@ -7,6 +7,7 @@ exports.up = function(knex) {
         table.decimal('value').notNullable(); 
 
         table.string('ong_id').notNullable();
+        
         table.foreign('ong_id').references('id').inTable('ongs');
     })
 };
